@@ -1,0 +1,1184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container1 {
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+
+}
+
+.main-container2 {
+  position: absolute;
+  background-color: #ADE792;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+
+}
+
+.container1 {
+  height: 31.25em;
+  width: 31.25em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 245px;
+  right: -288px;
+}
+
+form {
+  width: 23.75em;
+  height: 18.75em;
+  /* background-color: #ffffff; */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% + 3.1em);
+  left: 50%;
+  padding: 0 3.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5em;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+form label {
+  /* display: block; */
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  color: #2e0d30;
+}
+
+form input {
+  font-size: 0.95em;
+  font-weight: 400;
+  color: #3f3554;
+  padding: 0.3em;
+  border: none;
+  border-bottom: 0.12em solid #3f3554;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+form input:focus {
+  border-color: #f4c531;
+}
+
+form input:not(:last-child) {
+  margin-bottom: 0.9em;
+}
+
+form button {
+  padding: 0.8em 0;
+  border-radius: 2em;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-top: 0.8em;
+  color: #2e0d30;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #F0ECCF;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms
+}
+
+button:hover {
+  color: #FFB100;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+/* .panda-face {
+  height: 7.5em;
+  width: 8.4em;
+  background-color: #ffffff;
+  border: 0.18em solid #2e0d30;
+  border-radius: 7.5em 7.5em 5.62em 5.62em;
+  position: absolute;
+  top: 2em;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.ear-l,
+.ear-r {
+  background-color: #3f3554;
+  height: 2.5em;
+  width: 2.81em;
+  border: 0.18em solid #2e0d30;
+  border-radius: 2.5em 2.5em 0 0;
+  top: 1.75em;
+  position: absolute;
+}
+
+.ear-l {
+  transform: rotate(-38deg);
+  left: 10.75em;
+}
+
+.ear-r {
+  transform: rotate(38deg);
+  right: 10.75em;
+}
+
+.blush-l,
+.blush-r {
+  background-color: #ff8bb1;
+  height: 1em;
+  width: 1.37em;
+  border-radius: 50%;
+  position: absolute;
+  top: 4em;
+}
+
+.blush-l {
+  transform: rotate(25deg);
+  left: 1em;
+}
+
+.blush-r {
+  transform: rotate(-25deg);
+  right: 1em;
+}
+
+.eye-l,
+.eye-r {
+  background-color: #3f3554;
+  height: 2.18em;
+  width: 2em;
+  border-radius: 2em;
+  position: absolute;
+  top: 2.18em;
+}
+
+.eye-l {
+  left: 1.37em;
+  transform: rotate(-20deg);
+}
+
+.eye-r {
+  right: 1.37em;
+  transform: rotate(20deg);
+}
+
+.eyeball-l,
+.eyeball-r {
+  height: 0.6em;
+  width: 0.6em;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.6em;
+  top: 0.6em;
+  transition: 1s all;
+}
+
+.eyeball-l {
+  transform: rotate(20deg);
+}
+
+.eyeball-r {
+  transform: rotate(-20deg);
+}
+
+.nose {
+  height: 1em;
+  width: 1em;
+  background-color: #3f3554;
+  position: absolute;
+  top: 4.37em;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 1.2em 0 0 0.25em;
+  transform: rotate(45deg);
+}
+
+.nose:before {
+  content: "";
+  position: absolute;
+  background-color: #3f3554;
+  height: 0.6em;
+  width: 0.1em;
+  transform: rotate(-45deg);
+  top: 0.75em;
+  left: 1em;
+}
+
+.mouth,
+.mouth:before {
+  height: 0.75em;
+  width: 0.93em;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0.18em #3f3554;
+}
+
+.mouth {
+  top: 5.31em;
+  left: 3.12em;
+}
+
+.mouth:before {
+  content: "";
+  position: absolute;
+  left: 0.87em;
+}
+
+.hand-l,
+.hand-r {
+  background-color: #3f3554;
+  height: 2.81em;
+  width: 2.5em;
+  border: 0.18em solid #2e0d30;
+  border-radius: 0.6em 0.6em 2.18em 2.18em;
+  transition: 1s all;
+  position: absolute;
+  top: 8.4em;
+}
+
+.hand-l {
+  left: 7.5em;
+}
+
+.hand-r {
+  right: 7.5em;
+}
+
+.paw-l,
+.paw-r {
+  background-color: #3f3554;
+  height: 3.12em;
+  width: 3.12em;
+  border: 0.18em solid #2e0d30;
+  border-radius: 2.5em 2.5em 1.2em 1.2em;
+  position: absolute;
+  top: 26.56em;
+}
+
+.paw-l {
+  left: 10em;
+}
+
+.paw-r {
+  right: 10em;
+}
+
+.paw-l:before,
+.paw-r:before {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  height: 1.37em;
+  width: 1.75em;
+  top: 1.12em;
+  left: 0.55em;
+  border-radius: 1.56em 1.56em 0.6em 0.6em;
+}
+
+.paw-l:after,
+.paw-r:after {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  top: 0.31em;
+  left: 1.12em;
+  box-shadow: 0.87em 0.37em #ffffff, -0.87em 0.37em #ffffff;
+} */
+
+@media screen and (max-width: 500px) {
+  .container {
+    font-size: 14px;
+  }
+}
+
+/* srarting of ticket css*/
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
+  /* background-image: url('bg-img1.jpg'); */
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.left {
+  width: 55em;
+  height: 33em;
+  background: black;
+}
+
+.left-inside {
+  width: 54em;
+  height: 30em;
+  background-color: #F7EC7D;
+  position: absolute;
+  left: 30px; 
+}
+
+.right {
+  width: 27em;
+  height: 33em;
+  /* background: #E38F66; */
+  background: black;
+}
+
+.cir1 {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  /* margin: -100px 0px 0px -20px; */
+  /* margin is set as negative here so because of this even if make div named as container
+  position relartive and make this cir1 class position absolute and top=0 then also this div cir1 will go out of the 
+  div container */
+  top: -25px;
+  left: -25px;
+  z-index: 5;
+}
+
+.cir2 {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  /* margin: 100px 0px 0px -20px; */
+  bottom: -25px;
+  left: -25px;
+  z-index: 5;
+}
+
+
+.cir3 {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 0 0 50% 50%;
+  /* this convert div into U shape*- top-left, top-right, bottom-right , bottom-left*/
+  position: absolute;
+  /* margin: 0px 0px 100px 180px; */
+  top: -30px;
+  right: 392px;
+  z-index: 5;
+}
+
+.cir4 {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  /* margin: 0px 0px -100px 180px; */
+  bottom: -30px;
+  right: 392px;
+  z-index: 5;
+}
+
+.cir5 {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  /* margin: 0px 0px 100px 130px; */
+  top: -25px;
+  right: -25px;
+}
+
+.cir6 {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  /* margin: 0px 0px -100px 130px; */
+  right: -25px;
+  bottom: -25px;
+}
+
+.cir1-overlay{
+  width: 70px;
+  height: 70px;
+  background:black;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+}
+
+.cir2-overlay{
+  width: 70px;
+  height: 70px;
+  background:black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  z-index: 1;
+}
+
+.cir3-overlay{
+  width: 80px;
+  height: 80px;
+  background:black;
+  border-radius:50%;
+  position: absolute;
+  right: 403px;
+  top: -7px;
+  z-index: 1;
+}
+
+.cir4-overlay{
+  width: 80px;
+  height: 80px;
+  background:black;
+  border-radius:50%;
+  position: absolute;
+  right: 403px;
+  bottom: -13px;
+  z-index: 1;
+}
+
+
+
+.left-cir1 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 60px;
+  left: -5px;
+}
+
+.left-cir2 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 80px;
+  left: -5px;
+}
+
+.left-cir3 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 100px;
+  left: -5px;
+}
+
+.left-cir4 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 120px;
+  left: -5px;
+}
+
+.left-cir5 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 140px;
+  left: -5px;
+}
+
+.left-cir6 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 160px;
+  left: -5px;
+}
+
+.left-cir7 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 180px;
+  left: -5px;
+}
+
+.left-cir8 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 200px;
+  left: -5px;
+}
+
+.left-cir9 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 220px;
+  left: -5px;
+}
+
+.left-cir10 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 240px;
+  left: -5px;
+}
+
+.left-cir11 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 260px;
+  left: -5px;
+}
+
+.left-cir12 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 280px;
+  left: -5px;
+}
+
+.left-cir13 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 300px;
+  left: -5px;
+}
+
+.left-cir14 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 320px;
+  left: -5px;
+}
+
+.left-cir15 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 340px;
+  left: -5px;
+}
+
+.left-cir16 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 360px;
+  left: -5px;
+}
+
+
+.left-cir17 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 380px;
+  left: -5px;
+}
+
+.left-cir18 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 380px;
+  left: -5px;
+}
+
+.left-cir19 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 400px;
+  left: -5px;
+}
+
+.left-cir20 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 420px;
+  left: -5px;
+}
+
+.left-cir21 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 440px;
+  left: -5px;
+}
+
+.right-cir22 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 460px;
+  left: -5px;
+}
+
+
+.right-cir1 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 60px;
+}
+
+
+.right-cir2 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 80px;
+}
+
+
+.right-cir3 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 100px;
+}
+
+
+.right-cir4 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 120px;
+}
+
+
+.right-cir5 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 140px;
+}
+
+
+.right-cir6 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 160px;
+}
+
+
+.right-cir7 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 180px;
+}
+
+
+.right-cir8 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 200px;
+}
+
+
+.right-cir9 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 220px;
+}
+
+
+.right-cir10 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 240px;
+}
+
+
+.right-cir11 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 260px;
+}
+
+
+.right-cir12 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 280px;
+}
+
+
+.right-cir13 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 300px;
+}
+
+
+.right-cir14 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 320px;
+}
+
+
+.right-cir15 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 340px;
+}
+
+
+.right-cir16 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 360px;
+}
+
+
+.right-cir17 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 380px;
+}
+
+
+.right-cir18 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 400px;
+}
+
+
+.right-cir19 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 420px;
+}
+
+
+.right-cir20 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 440px;
+}
+
+
+.right-cir21 {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -5px;
+  top: 460px;
+}
+
+.mid-cir1 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 60px;
+}
+
+.mid-cir2 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 80px;
+}
+
+.mid-cir3 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 100px;
+}
+
+.mid-cir4 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 120px;
+}
+
+.mid-cir5 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 140px;
+}
+
+.mid-cir6 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 160px;
+}
+
+.mid-cir7 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 180px;
+}
+
+.mid-cir8 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 200px;
+}
+
+.mid-cir9 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 220px;
+}
+
+.mid-cir10 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 240px;
+}
+
+.mid-cir11 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 260px;
+}
+
+.mid-cir12 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 280px;
+}
+
+.mid-cir13 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 300px;
+}
+
+.mid-cir14 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 320px;
+}
+
+.mid-cir15 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 340px;
+}
+
+.mid-cir16 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 360px;
+}
+
+.mid-cir17 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 380px;
+}
+
+.mid-cir18 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 400px;
+}
+
+.mid-cir19 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 420px;
+}
+
+.mid-cir20 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 440px;
+}
+
+.mid-cir21 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: 412px;
+  top: 460px;
+}
+
+.t1{
+  position:absolute;
+  top: 100px;
+  left: 270px;
+  font-size: 100px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.logo{
+  position: absolute;
+  color: white;
+  right: 170px;
+  top: 50px;
+}
+
+.display{
+  background: black;
+  position: absolute;
+  color: white;
+  left: 38px;
+  font-size: 30px;
+  padding: 7px;
+}
